@@ -10,9 +10,9 @@ authorName: 'Serverless, inc.'
 authorAvatar: 'https://avatars1.githubusercontent.com/u/13742415?s=200&v=4'
 -->
 
-# API Node.js com Serverless Framework em ambiente AWS
+# Projeto de API simples no ambiente AWS em NodeJS
 
-Este repositório contém o código fonte do Live Coding da DIO no dia 29/07/2021. Neste projeto vamos criar uma infraestrutra em nuvem AWS com API Gateway, DynamoDB, AWS Lambda e AWS CloudFormation utilizando o framework Serverless para o desenvolvimento baseada em Infraestrutura as a Code.
+Projeto desenvolvido visando a criação de uma infraestrutura em nuvem baseada na AWS para a publicação de funções CRUD com lambda, banco de dados NoSQL e API utilizando o Serveless Framework
 
 ## Etapas
 
@@ -37,10 +37,10 @@ $ serverless
 Login/Register: No
 Update: No
 Type: Node.js REST API
-Name: dio-live
+Name: <nome do projeto>
 ```
 ```
-$ cd dio-live
+$ cd <nome do projeto>
 $ code .
 ``` 
 - No arquivo ```serverless.yml``` adicionar a região ```region: us-east-1``` dentro do escopo de ```provider:```
@@ -72,7 +72,7 @@ resources:
     ItemTable:
       Type: AWS::DynamoDB::Table
       Properties:
-          TableName: ItemTable
+          TableName: <nome da tabela>
           BillingMode: PAY_PER_REQUEST
           AttributeDefinitions:
             - AttributeName: id
